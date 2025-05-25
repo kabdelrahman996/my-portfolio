@@ -1,0 +1,116 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg custom-navbar"
+>
+  <div class="container">
+    <!-- Brand/Logo -->
+    <a class="navbar-brand fw-bold" href="#" (click)="scrollToSection('home')">
+      <i class="fas fa-code me-2 brand-icon"></i>
+      Abdelrahman Khaled
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="!isMenuCollapsed"
+      aria-controls="navbarNav"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div
+      class="collapse navbar-collapse"
+      [class.show]="!isMenuCollapsed"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/home']"
+            (click)="scrollToSection('home')"
+          >
+            <i class="fas fa-home me-1"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/about']"
+            (click)="scrollToSection('about')"
+          >
+            <i class="fas fa-user me-1"></i>
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/certificates']"
+            (click)="scrollToSection('certificates')"
+          >
+            <i class="fas fa-certificate me-1"></i>
+            Certificates
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/skills']"
+            (click)="scrollToSection('skills')"
+          >
+            <i class="fas fa-cogs me-1"></i>
+            Skills
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/projects']"
+            (click)="scrollToSection('projects')"
+          >
+            <i class="fas fa-laptop-code me-1"></i>
+            Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/contact']"
+            (click)="scrollToSection('contact')"
+          >
+            <i class="fas fa-envelope me-1"></i>
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <!-- Social Links -->
+      <div class="navbar-nav ms-3 social-links">
+        <a
+          class="nav-link social-link"
+          href="https://github.com/kabdelrahman996"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          class="nav-link social-link"
+          href="https://linkedin.com/in/abdelrahman669"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

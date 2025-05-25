@@ -1,0 +1,75 @@
+<section id="skills" class="skills-section py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+      <div class="divider mx-auto"></div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Frontend Skills -->
+      <div class="col-lg-6 mb-4">
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend Technologies</h3>
+          </div>
+          <div class="skills-card-body">
+            <div class="skills-grid">
+              <span class="skill-badge" *ngFor="let skill of frontendSkills">{{
+                skill
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Skills -->
+      <div class="col-lg-6 mb-4">
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <i class="fas fa-server"></i>
+            <h3>Backend Technologies</h3>
+          </div>
+          <div class="skills-card-body">
+            <div class="skills-grid">
+              <span class="skill-badge" *ngFor="let skill of backendSkills">{{
+                skill
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsive Design -->
+      <div class="col-lg-6 mb-4">
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Responsive Web Design</h3>
+          </div>
+          <div class="skills-card-body">
+            <p>{{ responsiveDesignDescription }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="col-lg-6 mb-4">
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Technologies</h3>
+          </div>
+          <div class="skills-card-body">
+            <div class="skills-grid">
+              <span class="skill-badge" *ngFor="let tool of toolsSkills">{{
+                tool
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

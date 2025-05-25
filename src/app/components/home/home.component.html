@@ -1,0 +1,146 @@
+<section id="home" class="hero-section d-flex align-items-center min-vh-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+        <div class="hero-content" data-aos="fade-right">
+          <!-- Greeting -->
+          <div class="greeting mb-3">
+            <span class="wave">👋</span>
+            <span class="greeting-text">Hello, I'm</span>
+          </div>
+
+          <!-- Name -->
+          <h1 class="hero-name mb-3">
+            <span class="highlight">Abdelrahman</span> Khaled
+          </h1>
+
+          <!-- Dynamic Role -->
+          <div class="role-container mb-4">
+            <span class="role-prefix">I'm a </span>
+            <span class="dynamic-role">{{ currentRole }}</span>
+            <span class="cursor" [class.typing]="isTyping">|</span>
+          </div>
+
+          <!-- Description -->
+          <p class="hero-description mb-4">
+            Passionate Full-Stack Developer specializing in the MEAN stack with
+            expertise in Angular, Node.js, Express.js, and MongoDB. I create
+            modern, responsive web applications with clean code and exceptional
+            user experiences.
+          </p>
+
+          <!-- Skills Tags -->
+          <div class="skills-tags mb-4">
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-buttons">
+            <button class="btn btn-primary me-3" [routerLink]="['/projects']">
+              <i class="fas fa-eye me-2"></i>
+              View My Work
+            </button>
+            <button class="btn btn-outline-light" (click)="downloadCV()">
+              <i class="fas fa-download me-2"></i>
+              Download CV
+            </button>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links mt-4">
+            <a
+              href="https://github.com/kabdelrahman996"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abdelrahman996"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="mailto:kabdelrahman996@gmail.com"
+              class="social-link"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+201558508867" class="social-link" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content - Profile Image/Animation -->
+      <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+        <div class="hero-image-container" data-aos="fade-left">
+          <div class="image-wrapper">
+            <!-- Animated Background -->
+            <div class="animated-bg">
+              <div class="floating-icon" style="--delay: 0s">
+                <i class="fab fa-angular"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 1s">
+                <i class="fab fa-node-js"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 2s">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 3s">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 4s">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 5s">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+            </div>
+
+            <!-- Profile Image Placeholder -->
+            <div class="profile-image">
+              <div class="image-placeholder">
+                <i class="fas fa-user-tie"></i>
+                <p class="mt-3 mb-0">Profile Photo</p>
+                <small class="text-muted">
+                  <img [src]="myImage" alt="" />
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <!-- <div class="scroll-indicator">
+      <div class="scroll-down" (click)="scrollToSection('about')">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <!-- Background Elements -->
+  <div class="background-elements">
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+  </div>
+</section>

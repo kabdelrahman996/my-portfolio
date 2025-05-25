@@ -1,0 +1,134 @@
+/* Minimalist Skills Section */
+.skills-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  min-height: 100vh;
+  padding: 80px 0;
+  color: #e0e0e0;
+}
+
+/* Section Header */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.section-title .highlight {
+  color: #00d4ff;
+}
+
+.divider {
+  height: 3px;
+  width: 60px;
+  background: #00d4ff;
+  margin-bottom: 40px;
+}
+
+/* Skills Card */
+.skills-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.skills-card-header {
+  background: rgba(0, 212, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-card-header i {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.skills-card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.skills-card-body {
+  padding: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background: rgba(0, 212, 255, 0.1);
+  color: #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: rgba(0, 212, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Responsive Text */
+.skills-card-body p {
+  margin: 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-section {
+    padding: 60px 0;
+  }
+
+  .skills-card-header h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-card-header {
+    padding: 15px;
+  }
+
+  .skills-card-body {
+    padding: 15px;
+  }
+
+  .skill-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,30 @@
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+      <div class="divider mx-auto"></div>
+      <p class="section-description mt-4">
+        Connect with me through any of these platforms
+      </p>
+    </div>
+
+    <!-- Contact Cards -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let contact of contacts">
+        <a
+          [href]="contact.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+        >
+          <div class="card-icon">
+            <i [class]="contact.icon"></i>
+          </div>
+          <h3>{{ contact.name }}</h3>
+          <p>{{ contact.text }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

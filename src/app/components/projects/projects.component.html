@@ -1,0 +1,84 @@
+<section id="projects" class="projects-section py-5">
+  <div class="container-fluid">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+      <div class="divider mx-auto"></div>
+      <p class="section-description mt-4">
+        A selection of my recent work and personal projects
+      </p>
+    </div>
+
+    <!-- Projects Ribbon Carousel -->
+    <div class="projects-carousel">
+      <!-- Navigation Buttons -->
+      <button class="carousel-nav prev-btn" (click)="scrollLeft()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-nav next-btn" (click)="scrollRight()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Projects Ribbon -->
+      <div class="projects-ribbon" #projectsContainer>
+        <div class="project-card" *ngFor="let project of projects">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" />
+            <div class="project-badge">{{ project.category }}</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-tech">
+              <span
+                class="tech-tag"
+                *ngFor="let tech of project.technologies.slice(0, 3)"
+                >{{ tech }}</span
+              >
+              <span
+                class="tech-tag more"
+                *ngIf="project.technologies.length > 3"
+                >+{{ project.technologies.length - 3 }}</span
+              >
+            </div>
+            <div class="project-links">
+              <a
+                *ngIf="project.demoLink"
+                [href]="project.demoLink"
+                target="_blank"
+                class="project-link demo-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a
+                *ngIf="project.codeLink"
+                [href]="project.codeLink"
+                target="_blank"
+                class="project-link code-link"
+              >
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Count Indicator -->
+    <div class="project-indicators">
+      <div
+        class="indicator"
+        *ngFor="let project of projects; let i = index"
+        [ngClass]="{ active: currentIndex === i }"
+        (click)="scrollToProject(i)"
+      ></div>
+    </div>
+
+    <!-- More Projects Button -->
+    <div class="text-center mt-5">
+      <a [href]="githubUrl" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View More Projects on GitHub
+      </a>
+    </div>
+  </div>
+</section>
