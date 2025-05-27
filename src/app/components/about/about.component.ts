@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
@@ -13,17 +14,6 @@ export class AboutComponent {
 
   ngOnInit(): void {
     // Initialize any animations or third-party libraries if needed
-  }
-
-  /**
-   * Scrolls to the specified section
-   * @param sectionId The ID of the section to scroll to
-   */
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
   /**
