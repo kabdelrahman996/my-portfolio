@@ -97,7 +97,7 @@ export class ProjectsComponent {
         'Mapbox',
       ],
       category: 'Full Stack',
-      // demoLink: 'https://your-demo-link.com/natours',
+      demoLink: 'https://natours-abb.netlify.app/',
       codeLink: 'https://github.com/kabdelrahman996/natours-backend.git',
     },
   ];
